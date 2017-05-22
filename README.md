@@ -2,6 +2,7 @@
 Formlarınızda güvenlik için kullanabileceğiniz basit bir csrf sınıfı.
 
 ## Kullanımı
+> **Not:** Bu sınıf tokenleri depolamak için session kullanır. Her sayfa başında `session_start();` yazmalısınız.
 ```
 <?php
 	session_start();
