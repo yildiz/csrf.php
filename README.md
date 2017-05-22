@@ -2,7 +2,8 @@
 Formlarınızda güvenlik için kullanabileceğiniz basit bir csrf sınıfı.
 
 ## Kullanımı
-```<?php
+```
+<?php
 	session_start();
 
 	include("csrf.class.php");
@@ -16,7 +17,8 @@ Formlarınızda güvenlik için kullanabileceğiniz basit bir csrf sınıfı.
 
 
 #### Token oluşturma
-```<?php
+```
+<?php
 	session_start();
 
 	include("csrf.class.php");
@@ -32,13 +34,18 @@ Formlarınızda güvenlik için kullanabileceğiniz basit bir csrf sınıfı.
 
 #### Süresi dolan tokenleri otomatik sildirmek
 Sınıfı başlatırken ilk parametre olarak **true** verirseniz, sınıf her başladığında süresi dolan tokenler otomatik olarak silinecektir.
-```<?php
-	
+```
+<?php
+	session_start();
+	include("csrf.class.php");
+
+	$class = new CSRF(true);
 ?>
 ```
 
 #### Token onaylama
-```<?php
+```
+<?php
 	if($_POST){
 		if($class->check_valid($_POST)){
 			echo "GÜvenlik kontrolü başarılı.";
@@ -51,7 +58,8 @@ Sınıfı başlatırken ilk parametre olarak **true** verirseniz, sınıf her ba
 ```
 
 #### Örnek
-```<?php
+```
+<?php
 	session_start();
 	include("csrf.class.php");
 
