@@ -11,10 +11,11 @@ Formlarınızda güvenlik için kullanabileceğiniz basit bir csrf sınıfı.
 	$token = $class->generate(SÜRE, UZUNLUK);
 
 	print_r($token);
+?>
+```
 
 
 #### Token oluşturma
-?>
 ```<?php
 	session_start();
 
